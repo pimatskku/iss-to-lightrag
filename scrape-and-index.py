@@ -63,13 +63,15 @@ for url in tqdm(page_urls, desc="Pages"):
         insert_page_to_rag({"url": url, "content": content})
     sleep(0.5)
 
-for url in tqdm(pdf_urls, desc="PDFs"):
-    status, content = insert_pdf_to_rag(url)
-    if status == 200:
-        print(f"[OK] PDF inserted: {url}")
-    else:
-        print(f"[FAIL] PDF: {url}, Status: {status}, Content: {content}")
-    sleep(0.5)
+## Commented out these lines below to save time in class
+# for url in tqdm(pdf_urls, desc="PDFs"):
+#     status, content = insert_pdf_to_rag(url)
+#     if status == 200:
+#         print(f"[OK] PDF inserted: {url}")
+#     else:
+#         print(f"[FAIL] PDF: {url}, Status: {status}, Content: {content}")
+#     sleep(0.5)
+
 
 
 
